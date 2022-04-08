@@ -34,6 +34,11 @@ function newsblock_child_assets() {
 		wp_enqueue_style( 'newsblock_child_assets_css', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array(), $version, 'all' );
 
 	}
+	$localize = array(
+		'darkMode' => csco_dark_mode_enabled() ? 'true' : 'false',
+		'load_more' => __( 'Load More', 'newsblock')
+	);
+	wp_localize_script('csco-scripts', 'csLocalize', $localize);
 }
 
 add_action( 'wp_enqueue_scripts', 'newsblock_child_assets', 99 );
