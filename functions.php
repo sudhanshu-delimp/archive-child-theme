@@ -164,7 +164,7 @@ function my_ajax_filter_search_callback() {
 
 			$year = get_the_date('Y');
 			$month = date('F d, Y', strtotime(get_the_date('Y-m-d H:i:s')));
-			$contentData = substr(strip_tags(get_the_content()), 0, 290);
+			$contentData = mb_substr(strip_tags(get_the_content()), 0, 290,'utf-8');
 			$featuredImgs = wp_get_attachment_url(get_post_thumbnail_id($post->ID),'full');
 			// if(!empty($featuredImgs)){
 			// 	$featuredImg = '<img src="'.wp_get_attachment_url(get_post_thumbnail_id($post->ID),'full').'" alt="'.get_the_title().'">';
