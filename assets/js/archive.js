@@ -11,7 +11,7 @@
 
   var reInitHomePage = function(){
     $('#ajax_filter_search_results').html(sbs_search_response);
-    if(sbs_search_category!=="undefined" || sbs_search_month!=="undefined" || sbs_search_year!==null){
+    if(sbs_search_category!=="undefined" || sbs_search_month!=="undefined" || sbs_search_year!=="null"){
       if(sbs_search_month!=="undefined"){
         mafsForm.find("#month").val(sbs_search_month);
       }
@@ -22,6 +22,7 @@
       if(sbs_search_category!=="undefined"){
         mafsForm.find("#category").val(sbs_search_category);
       }
+      console.log("open wall");
       $("#tabs li[data-tab-content='tab1']").addClass('active');
       $("div[data-tab-content='tab1']").addClass('active');
     }
@@ -33,6 +34,7 @@
 
   if(sbs_search_response !== null){
     reInitHomePage();
+    console.log(sessionStorage);
   }
 
   
