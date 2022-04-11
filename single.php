@@ -6,7 +6,8 @@
  */
 
 get_header(); ?>
-<button class="back-seach" onclick="history.go(-1);">رجوع إلى نتائج البحث</button>
+<!-- <button class="back-seach" onclick="history.go(-1);">رجوع إلى نتائج البحث</button> -->
+<a href="<?php echo site_url();?>"  class="back-seach"><?php echo __( 'back to search results', 'newsblock'); ?></a>
 <div id="primary" class="cs-content-area">
 
 	<?php do_action( 'csco_main_before' ); ?>

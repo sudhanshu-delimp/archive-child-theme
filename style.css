@@ -3256,9 +3256,7 @@ width: max-content;
 margin-top: 5px;
 height: auto;
 }
-#gform_fields_2 input#input_2_7, #input_2_8, fieldset#field_2_14 {
-width: 100%;
-}
+
 #gform_fields_2 img.ui-datepicker-trigger {
 position: absolute;
 }
